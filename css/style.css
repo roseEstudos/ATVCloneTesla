@@ -1,0 +1,685 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background-color: #fff;
+    overflow-x: hidden;
+}
+
+
+/* HEADER e NAV */
+header{
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    background-color: #fff;
+    z-index: 20;
+}
+
+.btn-menu {
+    display: none;
+}
+
+/* ------------- Menu Principal */
+.menu{
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100vw;
+    height: 70px;
+    padding: 0 50px;
+}
+
+/* ------------- Menu Esquerdo */
+.menu-left img{
+    height: 40px;
+    width: auto;
+}
+
+/* ------------- Menu Central */
+.menu-center a{
+    text-decoration: none;
+    color: #000;
+    font-weight: 600;
+    padding: 5px 10px;
+    font-size: 14px;
+}
+
+
+/* ------------- Menu Direito */
+.menu-right a i{
+    color: #000;
+    font-size: 20px;
+    padding: 0 20px;
+}
+
+
+
+/* ------------------- SECTION - Carrossel */
+.hero-content{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 15vh;
+    box-sizing: border-box;
+    z-index: 5;
+    background: url('../imgs/carroCarrossel1.png') center center / cover;
+}
+
+.hero-content h1{
+    color: #fff;
+    font-size: 5.5rem;
+    font-weight: 600;
+    margin: 0 0 20px 0;
+    letter-spacing: 2px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-button{
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+    z-index: 10;
+}
+
+.btn{
+    text-decoration: none;
+    padding: 16px 60px;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 600;
+    transition: background-color 0.3s, opacity 0.3s;
+    text-align: center;
+    min-width: 300px;
+}
+
+.btn-primary{
+    background-color: #3e6ae1;
+    color: #fff;
+    border: 1px solid #3e6ae1;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.btn-primary:hover{
+    background-color: #2b56cc;
+    border-color: #2b56cc;
+}
+
+.btn-secondary{
+    background-color: #f3f3f3;
+    color: #171a20;
+    border: 1px solid #f3f3f3;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.btn-secondary:hover{
+    background-color: #e0e0e0;
+    border-color: #f3f3f3;
+}
+
+.car-image-placeholder{
+    height: 50vh;
+    width: 100%;
+}
+
+.navigation-arrows{
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    transform: translateY(-50%);
+    z-index: 10;
+    pointer-events: none;
+}
+
+.arrow{
+    background: #fff;
+    color: #333;
+    border: none;
+    border-radius: 20%;
+    width: 60px;
+    height: 60px;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    opacity: 0.8;
+    transition: opacity 0.3s;
+    pointer-events: auto;
+}
+
+.arrow:hover{
+    opacity: 1;
+}
+
+.navigation-dots{
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 15px;
+    z-index: 10;
+}
+
+.dot{
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+}
+
+.dot.active{
+    background-color: #fff;
+}
+
+
+
+/* ---------------- SEÇÃO dos cards */
+.card-section{
+    padding: 50px;
+    background-color: #fff;
+    width: 100vw;
+}
+
+.card-content{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    max-width: 1400px;
+}
+
+.card {
+    position: relative;
+    height: 700px;
+    width: 1200px;
+    border-radius: 8px;
+    overflow: hidden;
+    color: #fff;
+    background-size: cover;
+    background-position: center;
+    box-shadow: inset 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card h2{
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    opacity: 0.9;
+    letter-spacing: 0.5px;
+}
+
+.card-info{
+    position: absolute;
+    bottom: 50px;
+    left: 40px;
+    right: 40px;
+    background-color: #333333c9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 25px 30px;
+    max-width: 400px;
+}
+
+.card-info h3{
+    font-weight: 600;
+    color: #fff;
+    font-size: 3.5rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.card-info p{
+    font-size: 2rem;
+    margin-bottom: 25px;
+    opacity: 0.9;
+}
+
+.card-buttons{
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.card-btn{
+    text-decoration: none;
+    padding: 10px 35px;
+    border-radius: 4px;
+    font-size: 15px;
+    font-weight: 600;
+    transition: opacity 0.3s;
+    text-align: center;
+    min-width: 150px;
+    border: none;
+    cursor: pointer;
+}
+
+.card-btn-pri{
+    background-color: #3e6ae1;
+    color: #fff;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.card-btn-pri:hover{
+    background-color: #2b56cc;
+}
+
+.card-btn-sec{
+    background-color: #fff;
+    color: #171a20;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.card-btn-sec:hover{
+    background-color: #e0e0e0;
+}
+
+.card-model-y{
+    background: url('../imgs/carroModeloY.png') center center / cover;
+}
+
+.card-model-3{
+    background: url('../imgs/carroModelo3.png') center center / cover;
+}
+
+.card-dots{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding-top: 20px;
+    padding-left: 290px;
+}
+
+.card-dot{
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: rgb(172, 170, 170);
+    cursor: pointer;
+}
+
+.card-dot-active{
+    background-color: #211e1e;
+}
+
+
+/* ------------ SEÇÃO teste drive ou comprar */
+.section-test-buy{
+    padding: 50px 0;
+    background-color: #fff;
+}
+
+.test-buy-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 25px;
+}
+
+.card-test-buy{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    padding: 60px 40px;
+    min-height: 200px;
+    position: relative;
+    overflow: hidden;
+}
+
+.card-test-buy-text-content{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-right: 20px;
+}
+
+.card-test-buy h2{
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #171a20;
+}
+
+.card-test-buy p{
+    font-size: 1rem;
+    color: #5c5e62;
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+
+.test-buy-btn{
+    background-color: #fff;
+    color: #171a20;
+    padding: 15px 50px;
+    border-radius: 4px;
+    font-size: 15px;
+    font-weight: 600;
+    transition: background-color 0.3s;
+    text-align: center;
+    align-self: flex-start;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    border: none;
+    cursor: pointer;
+    width: auto;
+}
+
+.test-buy-btn:hover{
+    background-color: #e0e0e0;
+}
+
+.card-test-buy-img{
+    position: relative;
+    height: 100%;
+    width: 50%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+.card-test-buy-img img{
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    border-radius: 0 8px 8px 0;
+}
+
+
+
+ /* SEÇÃO cards de outros produtos */
+.card-Powerwall{
+    background: url('../imgs/Powerwall.png') center center / cover;
+}
+
+.card-megapack{
+    background: url('../imgs/megapack.png') center center / cover;
+}
+
+/* SEÇÃO mapa de carregamento */
+.card-map-loading{
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    padding-bottom: 50px;
+}
+
+/* SEÇÃO text */
+.card-text{
+    padding: 0 50px 50px 50px;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+
+.text{
+    max-width: 1500px;
+    padding: 0 25px;
+}
+
+.text p{
+    font-size: 13px;
+    color: #5c5e62;
+    line-height: 1.5;
+    text-align: left;
+}
+
+.text p sup{
+    font-size: 10px;
+    vertical-align: super;
+}
+
+/* FOOTER */
+footer{
+    width: 100vw;
+    background-color: #fff;
+    padding: 20px 50px 30px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+footer a{
+    color: #5c5e62;
+    font-size: 12px;
+    font-weight: 400;
+    text-decoration: none;
+    margin: 0 8px 5px 8px;
+    padding: 0 5px;
+    transition: color 0.3s;
+}
+
+footer a:hover{
+    color: #000;
+}
+
+
+/* RESPONDIVIDADE */
+@media (max-width: 1430px){
+    .hero-section{
+        width: 100%;
+    }
+
+    .hero-content{
+        width: 100%;
+    }
+
+    .hero-content h1{
+        font-size: 90px;
+    }
+
+    .hero-button .btn{
+        padding: 14px 20px;
+        min-width: 210px;
+    }
+
+    .arrow{
+        width: 45px;
+        height: 45px;
+        font-size: 28px;
+    }
+
+    .card{
+        height: 600px;
+        width: 1000px;
+    }
+
+    .card-info h3{
+        font-size: 40px;
+    }
+
+    .card-info p{
+        font-size: 20px;
+    }
+
+    .card-btn{
+        font-size: 14px;
+        min-width: 115px;
+    }
+
+    .card-dot{
+        width: 10px;
+        height: 10px;
+    }
+    
+    footer{
+        width: 100%;
+    }
+}
+
+@media (max-width: 1210px){
+    .card{
+        height: 600px;
+        width: 900px;
+    }
+
+    .card-test-buy h2{
+        font-size: 18px;
+    }
+
+    .card-test-buy p{
+        font-size: 16px;
+    }
+
+
+    .test-buy-btn{
+        padding: 12px 30px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 1000px){
+    .dot{
+        width: 15px;
+        height: 15px;
+    }
+
+    .hero-content h1{
+        font-size: 70px;
+    }
+
+    .hero-button .btn{
+        padding: 12px 15px;
+        min-width: 170px;
+        font-size: 16px;
+    }
+
+    .card{
+        height: 500px;
+        width: 800px;
+    }
+
+    .card-info{
+        bottom: 25px;
+        left: 20px;
+        right: 20px;
+        padding: 15px;
+        max-width: 350px;
+    }
+
+    .card-info h3{
+        font-size: 30px;
+    }
+
+    .card-info p{
+        font-size: 18px;
+    }
+
+    .card-btn{
+        font-size: 14px;
+        min-width: 100px;
+    }
+
+    .test-buy-container{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .card-test-buy h2{
+        font-size: 20px;
+    }
+
+    .card-test-buy p{
+        font-size: 18px;
+    }
+
+
+    .test-buy-btn{
+        padding: 18px 30px;
+        font-size: 16px;
+    }
+
+    .footer{
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+@media(max-width: 940px){
+     .card{
+        height: 500px;
+        width: 600px;
+    }
+}
+
+@media (max-width: 750px){
+    .btn-menu{
+        display: flex;
+        border: none;
+        background-color: #f4f4f4;
+        font-size: 18px;
+        font-weight: bold;
+        padding: 10px 15px;
+        border-radius: 8px;
+        transition: color 0.3s;
+    }
+
+    .btn-menu:hover{
+        color: #5c5e62;
+        border: 1px solid #f4f4f4;
+    }
+
+    .menu-center{
+        display: none;
+    }
+
+    .menu-right i{
+        display: none;
+    }
+
+    .arrow{
+        display: none;
+    }
+
+    .card{
+        height: 700px;
+        width: 500px;
+    }
+
+    .card-info{
+        bottom: 10px;
+        left: 10px;
+        right: 10px;
+        padding: 10px;
+        max-width: 350px;
+    }
+
+    .card-info h3{
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    .card-info p{
+        font-size: 16px;
+    }
+
+    .card-btn{
+        font-size: 14px;
+        min-width: 80px;
+    }
+}
+
+@media (max-width: 650px){
+     .card{
+        height: 600px;
+        width: 400px;
+    }
+}

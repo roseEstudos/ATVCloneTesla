@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Clone Tesla</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+
+        <link rel="shortcut icon" href="./imgs/islogoTesla.png" type="image/x-icon">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <!-- HEADER e NAV -->
+         <header>
+            <nav class="menu">
+                <div class="menu-left">
+                    <a href="#">
+                        <img src="./imgs/logoTesta.png" alt="Home">
+                    </a>
+                </div>
+
+                <div class="menu-center">
+                    <a href="#">Veículos</a>
+                    <a href="#">Energia
+                    <a href="#">Carregamento</a>
+                    <a href="#">Descobrir</a>
+                    <a href="#">Loja</a>
+                </div>
+
+                <div class="menu-right">
+                    <a href="#"><i class="fas fa-question-circle"></i></a>
+                    <a href="#"><i class="fas fa-globe"></i></a>
+                    <a href="#"><i class="fas fa-circle-user"></i></a>
+                    <button class="btn-menu">Menu</button>
+                </div>
+            </nav>
+         </header>
+
+         <main>
+            <!-- SEÇÃO do Carrossel -->
+            <section class="hero-section">
+                <div class="hero-content">
+                    <h1>Model Y</h1>
+
+                    <div class="hero-button">
+                        <button class="btn btn-primary">Encomendar</button>
+                        <button class="btn btn-secondary">Test Drive</button>
+                    </div>
+
+                    <div class="car-image-placeholder"></div>
+                
+                    <div class="navigation-arrows">
+                        <button class="arrow prev-arrow">&#10094</button>
+                        <button class="arrow next-arrow">&#10095</button>
+                    </div>
+
+                    <div class="navigation-dots">
+                        <span class="dot active"></span>
+                        <span class="dot"></span>
+                    </div>  
+                </div>
+            </section>
+
+            <!-- SEÇÃO dos Cards dos carros -->
+            <section class="card-section">
+                <div class="card-content">
+                    <div class="card card-model-y">
+                        <h2>SUV de tamanho médio</h2>
+
+                        <div class="card-info">
+                            <h3>Model Y</h3>
+                            <p>A partir de 45 975 &euro;</p>
+
+                            <div class="card-buttons">
+                                <button class="card-btn card-btn-pri">Encomendar</button>
+                                <button class="card-btn card-btn-sec">Saiba mais</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card card-model-3">
+                        <h2>Sedan Desportivo</h2>
+
+                        <div class="card-info">
+                            <h3>Model 3</h3>
+
+                            <div class="card-buttons">
+                                <button class="card-btn card-btn-pri">Encomendar</button>
+                                <button class="card-btn card-btn-sec">Saiba mais</button>
+                            </div>
+                        </div>
+                    </div>
+                
+                </div>
+
+                <div class="card-dots">
+                    <span class="card-dot card-dot-active"></span>
+                    <span class="card-dot"></span>
+                    <span class="card-dot"></span>
+                    <span class="card-dot"></span>
+                </div>
+            </section>
+
+            <!-- SEÇÃO teste drive ou comprar -->
+             <section class="section-test-buy">
+                <div class="test-buy-container">
+                    <div class="card-test-buy">
+                        <div class="card-test-buy-text-content">
+                            <h2>Experimentar um veículo Tesla</h2>
+                            <p>Agende um teste drive hoje.</p>
+                            <button class="test-buy-btn">Marcar Teste Drive</button>
+                        </div>
+
+                        <div class="card-test-buy-img">
+                           <img src="./imgs/testeDrive.png" alt="Carro para test drive"> 
+                        </div>
+                    </div>
+
+
+                    <div class="card-test-buy">
+                        <div class="card-test-buy-text-content">
+                            <h2>Loja Tesla</h2>
+                            <p>Adquira acessórios para o veículo e merchandise da marca Tesla</p>
+                            <button class="test-buy-btn">Comprar Agora</button>
+                        </div>
+                        
+                        <div class="card-test-buy-img">
+                           <img src="./imgs/comprarCarro.png" alt="Carros da Loja Tesla"> 
+                        </div>
+                    </div>
+                </div>
+             </section>
+
+             <!-- SEÇÃO cards de outros produtos -->
+             <section class="card-section">
+                <div class="card-content">
+                    <div class="card card-Powerwall">
+
+                        <div class="card-info">
+                            <h3>Powerwall</h3>
+                            <p>Mantenha a iluminação da casa a funcionar durante as falhas de energia</p>
+
+                            <div class="card-buttons">
+                                <button class="card-btn card-btn-pri">Solicitar um orçamento</button>
+                                <button class="card-btn card-btn-sec">Saiba mais</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card card-megapack">
+
+                        <div class="card-info">
+                            <h3>Megapack</h3>
+                            <p>Baterias enormes para um suporte de energia enorme</p>
+
+                            <div class="card-buttons">
+                                <button class="card-btn card-btn-pri">Saiba mais</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-dots">
+                    <span class="card-dot card-dot-active"></span>
+                    <span class="card-dot"></span>
+                </div>
+             </section>
+
+             <!-- SEÇÃO mapa de carregamento -->
+            <section class="card-map-loading">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d22058761.94588168!2d1.0389292133519088!3d47.553778755780534!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46ed8886cfadda85%3A0x72ef99e6b3fcf079!2sEuropa!5e0!3m2!1spt-PT!2sbr!4v1760050402252!5m2!1spt-PT!2sbr" width="90%" height="500" style="border:0; border-radius: 20px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </section>
+
+             <!-- SEÇÃO text -->
+              <section class="card-text">
+                <div class="text">
+                    <p><sup>1</sup> Os carregamentos com Supercharger e Conetividade Premium gratuitos e ilimitados são válidos apenas para novas encomendas personalizadas e veículos Model S e Model X pré-configurados encomendados após 6 de fevereiro de 2025. Esta oferta pode ser combinada com outras ofertas financeiras. Esta oferta aplica-se a veículos de test drive e de exposição. Os veículos usados certificados estão excluídos desta oferta. Esta oferta é válida por tempo limitado e pode ser cancelada a qualquer momento. A Tesla não garante a disponibilidade do veículo antes do fim da oferta. A vantagem de carregamentos gratuitos com Supercharger e Conetividade Premium está associada ao VIN do veículo e ao primeiro condutor a receber a entrega. A vantagem de carregamentos gratuitos com Supercharger e Conetividade Premium não pode ser transferida para outra pessoa, em caso de transferência de propriedade, ou para outro veículo. Os carregamentos gratuitos com Supercharger apenas podem ser trocados diretamente em Superchargers propriedade da Tesla. As encomendas comerciais terão de especificar o nome do condutor que recebe a entrega para que esse condutor possa beneficiar. A vantagem de carregamentos gratuitos com Supercharger e Conetividade Premium não pode ser transferida, resgatada ou trocada por créditos ou dinheiro. As pessoas que beneficiarem desta promoção continuam a estar sujeitas a "taxas por inatividade" ou encargos e à política de utilização justa de Superchargers.</p>
+                </div>
+              </section>
+         </main>
+
+         <!-- FOOTER -->
+          <footer>
+            <a href="#">Tesla © 2025</a>
+            <a href="#">Política de privacidade e informações legais</a>
+            <a href="#">Contacto</a>
+            <a href="#">Notícias</a>
+            <a href="#">Atualizações</a>
+            <a href="#">Onde estamos</a>
+            <a href="#">Livro de reclamações</a>
+          </footer>
+    </body>
+</html>
